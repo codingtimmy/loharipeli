@@ -28,12 +28,13 @@ private static boolean etsiAarteita() {
 		Scanner lukija = new Scanner(System.in);
 		boolean aarreMukana = false;
 		int vastaus = 0;
-		System.out.println("Mene luolaan? 1. Marssi tai 2. Hiivi");
+		System.out.println("Mene luolaan?\n\t1) Marssi\n\t2) Hiivi");
 		vastaus = lukija.nextInt();
 		lukija.nextLine();
 		do {
 			if (vastaus == 1) {
 				//marssit luolaan äänekkäin askelin, ja herätät lohiksen
+				System.out.println("Marssimisesi kilisyttää kolikoita jalkojesi alla. Kuulet lohikäärmeen heräävän...");
 				return aarreMukana;
 			}
 			else if (vastaus == 2) {
@@ -46,7 +47,7 @@ private static boolean etsiAarteita() {
 			}
 		} while (vastaus != 1 && vastaus != 2);
 		System.out.println("Astuttuasi luolaan näet kokonaisen vuoren timantteja ja kultakolikoita. Aarteen arvo on mittamaton! \nJa aarteen päällä näet lohikäärmeen nukkumassa lokoisasti. \nPeto on lähes kolmikerroksisen talon kokoinen siivekäs jättilisko, valtavilla tassuilla ja suomuisalla nahalla.");
-		System.out.println("\nKerää aarteita? 1) Kerää aarteita tai 2) Älä kerää aarteita");
+		System.out.println("\nKerää aarteita?\n\t1) Kerää aarteita\n\t2) Älä kerää aarteita");
 		vastaus = lukija.nextInt();
 		lukija.nextLine();
 		do {
@@ -65,17 +66,18 @@ private static boolean etsiAarteita() {
 			}
 		} while (vastaus != 1 && vastaus != 2);
 		System.out.println("Lähestyt lohikäärmettä. Ilma lämpenee pedon pelkästä läsnäolosta.");
-		System.out.println("Kutita lohikäärmettä? 1. Kutita tai 2. Älä kutita");
+		System.out.println("Kutita lohikäärmettä?\n\t1) Kutita\n\t2) Älä kutita");
 		vastaus = lukija.nextInt();
 		lukija.nextLine();
 		do {
 			if (vastaus == 1) {
 				//kutitat lohikäärmettä
+				System.out.println("Et voi vastustaa kiusauta ja menet kutittamaan lohikäärmettä. Se herää tuhahtaen.");
 				return aarreMukana;
 			}
 			else if (vastaus == 2) {
 				//ähäkutti! Kutitat lohikäärmettä väkisin!
-				System.out.println("Kutitat lohikäärmettä vasten tahtoasi.");
+				System.out.println("Tunnet jonkin mystisen voiman ottavan kätesi hallinnan, ja kutitat lohikäärmettä vasten tahtoasi.\nNäet sen nousevan jaloilleen.");
 				return aarreMukana;
 			}
 			else {
@@ -141,10 +143,12 @@ private static boolean etsiAarteita() {
 		lukija.nextLine();
 		do {
 			if (vastaus == 2) {
+				//lohikäärme vihaa läheisessä kylässä asuvia kääpiöitä, joten se hyökkää joka tapauksessa jos valehtelee tässä
 				System.out.println("Kerrot tulleesi läheisestä kylästä. Lohikäärmeen silmissä välähtää viha.\n\"Kääpiöt. Olisi pitänyt arvata!\"");
 				potutus+=3;
 			}
 			else if (vastaus == 1) {
+				//tilanne pelastuu jos on tarpeeksi rehellinen
 				System.out.println("Kerrot asuvasi pienessä kylässä kaukana täältä. Uskaltaudut kertomaan elämästäsi, ja lohikäärme kuuntelee kiinnostuneena.");
 			}
 			else {
