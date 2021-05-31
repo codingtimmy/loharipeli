@@ -5,7 +5,9 @@ public class Loharipeli {
 	private static void pelaaPeli() {
 		Scanner lukija = new Scanner(System.in);
 		System.out.println("Tähän pelin sisältö.");
+		//käydään etsimässä aarteita metodissa, palautetaan arvona boolean siitä onko se mukana
 		boolean aarreMukana = etsiAarteita();
+		//lohikäärme herää, keskustelu käydään omassa metodissaan ja katsotaan, kuoleeko pelaajahahmo vai ei
 		boolean kuollaanko = keskustelu();
 		if (kuollaanko == true) {
 			//kuollaan
@@ -25,11 +27,11 @@ public class Loharipeli {
 		}
 		System.out.println("\nPalataan valikkoon...");
 	}
-private static boolean etsiAarteita() {
+	private static boolean etsiAarteita() {
 		Scanner lukija = new Scanner(System.in);
 		boolean aarreMukana = false;
 		int vastaus = 0;
-		System.out.println("Mene luolaan? 1. Marssi tai 2. Hiivi");
+		System.out.println("Astut lohikäärmeen luolaan. Tehtäväsi on etsiä \n\t1) Marssi\n\t2) Hiivi");
 		vastaus = lukija.nextInt();
 		do {
 			if (vastaus == 1) {
@@ -42,7 +44,7 @@ private static boolean etsiAarteita() {
 				System.out.println("Öhöm. uusi yritys.");
 			}
 		} while (vastaus != 1 && vastaus != 2);
-		System.out.println("Kerää aarteita? 1. Kerää aarteita tai 2. Älä kerää aarteita");
+		System.out.println("Kerää aarteita?\n\t1) Kerää aarteita\n\t2) Älä kerää aarteita");
 				do {
 			if (vastaus == 1) {
 				return aarreMukana;
