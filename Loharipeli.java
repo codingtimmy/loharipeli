@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Loharipeli {
 	private static void pelaaPeli() {
 		Scanner lukija = new Scanner(System.in);
-		System.out.println("Tähän pelin sisältö.");
+		System.out.println("Saavut luolan suulle. Kylmä viima saa sinut värisemään. Astut sisään suojaan tuulelta.");
 		boolean aarreMukana = etsiAarteita();
 		boolean kuollaanko = keskustelu();
 		if (kuollaanko == true) {
@@ -28,31 +28,32 @@ private static boolean etsiAarteita() {
 		Scanner lukija = new Scanner(System.in);
 		boolean aarreMukana = false;
 		int vastaus = 0;
-		System.out.println("Mene luolaan?\n\t1) Marssi\n\t2) Hiivi");
+		System.out.println("Luolassa on jopa epäluonnollisen lämmintä. Tajuat saapuneesi lohikäärmeen luolaan!\n\t1) Marssi sisään\n\t2) Hiivi sisään");
 		vastaus = lukija.nextInt();
 		lukija.nextLine();
 		do {
 			if (vastaus == 1) {
 				//marssit luolaan äänekkäin askelin, ja herätät lohiksen
-				System.out.println("Marssimisesi kilisyttää kolikoita jalkojesi alla. Kuulet lohikäärmeen heräävän...");
+				System.out.println("Marssimisesi kaikuu tunneleissa. Kuulet lohikäärmeen heräävän kammiossaan...");
 				return aarreMukana;
 			}
 			else if (vastaus == 2) {
 				//hiivit luolaan, lohis ei herää
-				System.out.println("Hiivit luolaan, ja näet aarteita.");
+				System.out.println("Hiivit luolaan varovasti. Eihän sitä tiedä, onko lohikäärme kotona vai ei.");
 			}
 			else {
 				//ei hyväksyttävä vastaus
 				System.out.println("Öhöm. uusi yritys.");
 			}
 		} while (vastaus != 1 && vastaus != 2);
-		System.out.println("Astuttuasi luolaan näet kokonaisen vuoren timantteja ja kultakolikoita. Aarteen arvo on mittamaton! \nJa aarteen päällä näet lohikäärmeen nukkumassa lokoisasti. \nPeto on lähes kolmikerroksisen talon kokoinen siivekäs jättilisko, valtavilla tassuilla ja suomuisalla nahalla.");
+		System.out.println("\nAstuttuasi luolaan näet kokonaisen vuoren timantteja ja kultakolikoita. Aarteen arvo on mittamaton! \nJa aarteen päällä näet lohikäärmeen nukkumassa lokoisasti. \nPeto on lähes kolmikerroksisen talon kokoinen siivekäs jättilisko, valtavilla tassuilla ja suomuisalla nahalla.");
 		System.out.println("\nKerää aarteita?\n\t1) Kerää aarteita\n\t2) Älä kerää aarteita");
 		vastaus = lukija.nextInt();
 		lukija.nextLine();
 		do {
 			if (vastaus == 1) {
 				//keräät aarteita
+				System.out.println("Kauhaiset aarteita taskuihisi. Kilinä kaikuu kammion seinissä.\nNostettuasi katseesi näet lohikäärmeen heränneen!");
 				aarreMukana = true;
 				return aarreMukana;
 			}
