@@ -45,7 +45,8 @@ private static boolean etsiAarteita() {
 				System.out.println("Öhöm. uusi yritys.");
 			}
 		} while (vastaus != 1 && vastaus != 2);
-		System.out.println("Kerää aarteita? 1. Kerää aarteita tai 2. Älä kerää aarteita");
+		System.out.println("Astuttuasi luolaan näet kokonaisen vuoren timantteja ja kultakolikoita. Aarteen arvo on mittamaton! \nJa aarteen päällä näet lohikäärmeen nukkumassa lokoisasti. \nPeto on lähes kolmikerroksisen talon kokoinen siivekäs jättilisko, valtavilla tassuilla ja suomuisalla nahalla.");
+		System.out.println("Kerää aarteita? 1) Kerää aarteita tai 2) Älä kerää aarteita");
 				do {
 			if (vastaus == 1) {
 				//keräät aarteita
@@ -54,13 +55,14 @@ private static boolean etsiAarteita() {
 			}
 			else if (vastaus == 2) {
 				//et kerää aarteita, vaan tutkit lohikäärmettä
-				System.out.println("Et kerää aarteita. Näet lohikäärmeen nukkumassa. Sen nahka näyttää jännältä");
+				System.out.println("Et kerää aarteita. Katsot nukkuvaa lohikäärmettä. Sen nahka näyttää jännältä");
 			}
 			else {
 				//ei hyväksyttävä vastaus
 				System.out.println("Öhöm. uusi yritys.");
 			}
 		} while (vastaus != 1 && vastaus != 2);
+		System.out.println("Lähestyt lohikäärmettä. Ilma lämpenee pedon pelkästä läsnäolosta.");
 		System.out.println("Kutita lohikäärmettä? 1. Kutita tai 2. Älä kutita");
 				do {
 			if (vastaus == 1) {
@@ -91,7 +93,7 @@ private static boolean etsiAarteita() {
 		
 		//Lohikäärme alkaa kysellä asioita ja ärsyyntyy tai on ärsyyntymättä lukijan vastauksien mukaan.
 		//kysymys 1
-		System.out.println("\nLohikäärme kääntää katseensa sinuun. Se näyttää kärttyisältä, katkaistiinhan siltä makoisat unet.\n\"Kuka sinä olet?\" se jylisee, ja vatsasi tuntuu putoavan vähintään metrin alaspäin sen voimasta.\n\t1) ole hiljaa\n\t2) kerro nimesi");
+		System.out.println("\nLohikäärme kääntää katseensa sinuun. Se katse on myrkyllisen pistävän voimakas., katkaistiinhan siltä makoisat unet.\n\"Kuka sinä olet?\" se jylisee, ja vatsasi tuntuu putoavan vähintään metrin alaspäin sen voimasta.\n\t1) ole hiljaa\n\t2) kerro nimesi");
 		vastaus = lukija.nextInt();
 		lukija.nextLine();
 		do {
