@@ -5,9 +5,7 @@ public class Loharipeli {
 	private static void pelaaPeli() {
 		Scanner lukija = new Scanner(System.in);
 		System.out.println("Tähän pelin sisältö.");
-		//käydään etsimässä aarteita metodissa, palautetaan arvona boolean siitä onko se mukana
 		boolean aarreMukana = etsiAarteita();
-		//lohikäärme herää, keskustelu käydään omassa metodissaan ja katsotaan, kuoleeko pelaajahahmo vai ei
 		boolean kuollaanko = keskustelu();
 		if (kuollaanko == true) {
 			//kuollaan
@@ -27,46 +25,55 @@ public class Loharipeli {
 		}
 		System.out.println("\nPalataan valikkoon...");
 	}
-	private static boolean etsiAarteita() {
+private static boolean etsiAarteita() {
 		Scanner lukija = new Scanner(System.in);
 		boolean aarreMukana = false;
 		int vastaus = 0;
-		System.out.println("Astut lohikäärmeen luolaan. Tehtäväsi on etsiä \n\t1) Marssi\n\t2) Hiivi");
+		System.out.println("Mene luolaan? 1. Marssi tai 2. Hiivi");
 		vastaus = lukija.nextInt();
 		do {
 			if (vastaus == 1) {
+				//marssit luolaan äänekkäin askelin, ja herätät lohiksen
 				return aarreMukana;
 			}
 			else if (vastaus == 2) {
+				//hiivit luolaan, lohis ei herää
 				System.out.println("Hiivit luolaan, ja näet aarteita.");
 			}
 			else {
+				//ei hyväksyttävä vastaus
 				System.out.println("Öhöm. uusi yritys.");
 			}
 		} while (vastaus != 1 && vastaus != 2);
-		System.out.println("Kerää aarteita?\n\t1) Kerää aarteita\n\t2) Älä kerää aarteita");
+		System.out.println("Kerää aarteita? 1. Kerää aarteita tai 2. Älä kerää aarteita");
 				do {
 			if (vastaus == 1) {
+				//keräät aarteita
+				aarreMukana = true;
 				return aarreMukana;
 			}
 			else if (vastaus == 2) {
-				System.out.println("Keräät aarteita mukaasi. Näet lohikäärmeen nukkumassa. Sen nahka näyttää jännältä");
-				aarreMukana = true;
+				//et kerää aarteita, vaan tutkit lohikäärmettä
+				System.out.println("Et kerää aarteita. Näet lohikäärmeen nukkumassa. Sen nahka näyttää jännältä");
 			}
 			else {
+				//ei hyväksyttävä vastaus
 				System.out.println("Öhöm. uusi yritys.");
 			}
 		} while (vastaus != 1 && vastaus != 2);
 		System.out.println("Kutita lohikäärmettä? 1. Kutita tai 2. Älä kutita");
 				do {
 			if (vastaus == 1) {
+				//kutitat lohikäärmettä
 				return aarreMukana;
 			}
 			else if (vastaus == 2) {
+				//ähäkutti! Kutitat lohikäärmettä väkisin!
 				System.out.println("Kutitat lohikäärmettä vasten tahtoasi.");
 				return aarreMukana;
 			}
 			else {
+				//ei hyväksyttävä vastaus
 				System.out.println("Öhöm. uusi yritys.");
 			}
 		} while (vastaus != 1 && vastaus != 2);
