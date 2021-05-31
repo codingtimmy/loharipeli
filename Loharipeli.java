@@ -13,7 +13,6 @@ public class Loharipeli {
 		}
 		else {
 			//selvitään
-			System.out.println("Livautat sormuksen sormeesi, ja sinusta tulee näkymätön! Hämmennyksen turvin hiivit kohti luolan suuta.");
 			if (aarreMukana == true) {
 				//jee
 				System.out.println("\nPääsit ulos ehjin nahoin, ja mukanasi on kimmeltävä aarre. Jee!");
@@ -161,7 +160,10 @@ private static boolean etsiAarteita() {
 				if (reaktio == 1 || reaktio == 3) {
 					hyokkaako = true;
 				}
-				else if (reaktio != 2) {
+				else if (reaktio == 2) {
+					System.out.println("Livautat sormuksen sormeesi, ja sinusta tulee näkymätön! Hämmennyksen turvin hiivit kohti luolan suuta.");
+				}
+				else {
 					System.out.println("Öhöm. uusi yritys.");
 				}
 			} while (reaktio != 1 && reaktio != 2 && reaktio != 3);
