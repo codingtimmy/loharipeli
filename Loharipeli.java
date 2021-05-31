@@ -47,7 +47,8 @@ private static boolean etsiAarteita() {
 		} while (vastaus != 1 && vastaus != 2);
 		System.out.println("Astuttuasi luolaan näet kokonaisen vuoren timantteja ja kultakolikoita. Aarteen arvo on mittamaton! \nJa aarteen päällä näet lohikäärmeen nukkumassa lokoisasti. \nPeto on lähes kolmikerroksisen talon kokoinen siivekäs jättilisko, valtavilla tassuilla ja suomuisalla nahalla.");
 		System.out.println("Kerää aarteita? 1) Kerää aarteita tai 2) Älä kerää aarteita");
-				do {
+		vastaus = lukija.nextInt();
+		do {
 			if (vastaus == 1) {
 				//keräät aarteita
 				aarreMukana = true;
@@ -64,7 +65,8 @@ private static boolean etsiAarteita() {
 		} while (vastaus != 1 && vastaus != 2);
 		System.out.println("Lähestyt lohikäärmettä. Ilma lämpenee pedon pelkästä läsnäolosta.");
 		System.out.println("Kutita lohikäärmettä? 1. Kutita tai 2. Älä kutita");
-				do {
+		vastaus = lukija.nextInt();
+		do {
 			if (vastaus == 1) {
 				//kutitat lohikäärmettä
 				return aarreMukana;
@@ -93,7 +95,7 @@ private static boolean etsiAarteita() {
 		
 		//Lohikäärme alkaa kysellä asioita ja ärsyyntyy tai on ärsyyntymättä lukijan vastauksien mukaan.
 		//kysymys 1
-		System.out.println("\nLohikäärme kääntää katseensa sinuun. Se katse on myrkyllisen pistävän voimakas., katkaistiinhan siltä makoisat unet.\n\"Kuka sinä olet?\" se jylisee, ja vatsasi tuntuu putoavan vähintään metrin alaspäin sen voimasta.\n\t1) ole hiljaa\n\t2) kerro nimesi");
+		System.out.println("\nLohikäärme kääntää katseensa sinuun. Se katse on myrkyllisen pistävän voimakas, katkaistiinhan siltä makoisat unet.\n\"Kuka sinä olet?\" se jylisee, ja vatsasi tuntuu putoavan vähintään metrin alaspäin sen voimasta.\n\t1) ole hiljaa\n\t2) kerro nimesi");
 		vastaus = lukija.nextInt();
 		lukija.nextLine();
 		do {
