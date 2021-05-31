@@ -31,6 +31,7 @@ private static boolean etsiAarteita() {
 		int vastaus = 0;
 		System.out.println("Mene luolaan? 1. Marssi tai 2. Hiivi");
 		vastaus = lukija.nextInt();
+		lukija.nextLine()
 		do {
 			if (vastaus == 1) {
 				//marssit luolaan äänekkäin askelin, ja herätät lohiksen
@@ -46,8 +47,9 @@ private static boolean etsiAarteita() {
 			}
 		} while (vastaus != 1 && vastaus != 2);
 		System.out.println("Astuttuasi luolaan näet kokonaisen vuoren timantteja ja kultakolikoita. Aarteen arvo on mittamaton! \nJa aarteen päällä näet lohikäärmeen nukkumassa lokoisasti. \nPeto on lähes kolmikerroksisen talon kokoinen siivekäs jättilisko, valtavilla tassuilla ja suomuisalla nahalla.");
-		System.out.println("Kerää aarteita? 1) Kerää aarteita tai 2) Älä kerää aarteita");
+		System.out.println("\nKerää aarteita? 1) Kerää aarteita tai 2) Älä kerää aarteita");
 		vastaus = lukija.nextInt();
+		lukija.nextLine()
 		do {
 			if (vastaus == 1) {
 				//keräät aarteita
@@ -66,6 +68,7 @@ private static boolean etsiAarteita() {
 		System.out.println("Lähestyt lohikäärmettä. Ilma lämpenee pedon pelkästä läsnäolosta.");
 		System.out.println("Kutita lohikäärmettä? 1. Kutita tai 2. Älä kutita");
 		vastaus = lukija.nextInt();
+		lukija.nextLine()
 		do {
 			if (vastaus == 1) {
 				//kutitat lohikäärmettä
